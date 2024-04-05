@@ -6,7 +6,9 @@
 - [Map Scripts](#map-scripts)
 
 # Summary
-Personal Documentation for Spellforce scripting that I made as I was learning.
+This is a personal documentation that I made while learning Spellforce scripting.
+
+A lot of the code and explanations provided here requires the Source Lua files found in: https://github.com/THQNordic/SpellForceLUASources
 
 # Definitions
 **ODER:** This is an OR function that checks if either of the two conditions is true. It returns True if either condition1 or condition2 is true, and False otherwise. 
