@@ -29,16 +29,19 @@ For example: `Negated( IsGlobalFlagTrue{ Name=“FlagName” } )`
 
 **IsMonumentInUse( Name=“MonumentName” ):** This conditional checks if a monument (identified by “MonumentName”) is currently in use.
 
-**PlayerHasGood{}:** This conditional checks if the player has a specified good. The properties of the good (such as its type, amount, and side) are defined within the brackets.
+**PlayerHasGood{}:** This conditional checks if the player has a specified good (resource). The properties of the good (such as its type, amount, and side) are defined within the brackets.
 For example:
 ```
 PlayerHasGood
 {
-   -– Types of Goods: GoodBoard(wood), GoodStone. 
-   -– Sides: SideLight for Human, Elves and Dwarves and "SideDark" for Dark Elves, Trolls and Orcs. 
-   Good = <goodType>,
-   Amount = <amount>, 
-   Side = <side>
+   -– Types of Goods: GoodBoard(wood), GoodStone.
+   Good = GoodStone,
+
+   -- Amount: Minimum amount of Goods.
+   Amount = 1000,
+
+   -– Sides: SideLight for Human, Elves and Dwarves or "SideDark" for Dark Elves, Trolls and Orcs. 
+   Side = SideLight
 }
 ```
 
