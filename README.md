@@ -33,3 +33,73 @@ PlayerHasGood
    Side = <side>
 }
 ```
+
+# Code Examples
+
+### RtsSpawn
+```
+Blades2 = 
+{
+    X = 215,
+    Y = 290,
+    Range = 1,
+    Chief = 0,
+    WaitTime = 80,
+    AvatarMinLevel = 0,
+    AvatarMaxLevel = 0,
+    Conditions = 
+    {
+        
+    },
+    Units = 
+    {
+        302,
+        304,
+        305,
+        307,
+        302 
+    },
+    ShuffleUnits = TRUE 
+}
+InitSpawn
+{
+    Clan = 4,
+    Groups = 
+    {
+        Blades1,
+        Blades2 
+    },
+    Conditions = 
+    {
+        IsGlobalFlagTrue
+        {
+            Name = "LightSpawnStart"
+        },
+        FigureAlive
+        {
+            NpcId = 302
+        } 
+    } 
+}
+RtsSpawn
+{
+    Clan = 4,
+    MaxClanSize = 31,
+    Groups = 
+    {
+        Blades1,
+        Blades2 
+    },
+    Conditions = 
+    {
+        IsGlobalFlagTrue
+        {
+            Name = "LightSpawnStart"
+        },
+        FigureAlive
+        {
+            NpcId = 302
+        } 
+    } 
+}
+```
