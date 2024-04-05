@@ -34,7 +34,7 @@ For example:
 ```
 PlayerHasGood
 {
-   -– Types of Goods: GoodBoard(wood), GoodStone, GoodMithril, GoodFood, GoodIron, GoodManaElixir(aria), GoodManaHerb(placeholder).
+   -– Types of Goods: GoodBoard(Wood), GoodStone, GoodMithril, GoodFood, GoodIron, GoodManaElixir(Aria), GoodManaHerb(Lenya).
    Good = GoodStone,
 
    -- Amount: Minimum amount of Goods.
