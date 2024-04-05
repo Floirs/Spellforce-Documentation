@@ -3,7 +3,7 @@
 - [Summary](#summary)
 - [Definitions](#definitions)
 - [Conditionals](#conditionals)
-- [Maps](#maps)
+- [Map Scripts](#map-scripts)
 
 # Summary
 Personal Documentation for Spellforce scripting that I made as I was learning.
@@ -40,9 +40,12 @@ PlayerHasGood
 }
 ```
 
-# Maps
-
+# Map Scripts
+Maps has access to RtsSpawn and RtsSpawnNT for entity spawn/respawn.
 ### RtsSpawn
+`RtsSpawn` is a function that creates a respawn table. This table is used to spawn groups of entities, typically led by a Chief. The `FigureAlive` condition can be used to enable or disable the spawning and respawning of these entities. Notably, `RtsSpawn` does not depend on Camps and Buildings.
+
+Here's an example of how to use `RtsSpawn`:
 ```
 Blades2 = 
 {
