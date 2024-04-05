@@ -119,3 +119,12 @@ RtsSpawn
     } 
 }
 ```
+
+
+# Items (barebones for now, just so I don't forget)
+
+### Adding new Items
+It's important that after creating your new item, to go into the editor SQL Modifier and sql_item.lua and add the item model, otherwise it'll be invisible ingame.
+
+### Adding new Map Objects
+Same as the items section, it's necessary to go into SQL Modifier and sql_object.lua and add the model for the object.
