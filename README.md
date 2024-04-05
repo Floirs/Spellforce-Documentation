@@ -15,8 +15,8 @@ For example: OR(condition1, condition2)
 
 **IsGlobalFlagFalse{ Name=“FlagName” }:** This conditional checks if a global flag (identified by “FlagName”) is set to false.
 
-**Negated():** This function takes a condition as an argument and returns the opposite of that condition's truth value. If the condition is true, Negated(condition) will return false, and vice versa.
-For example: Negated( IsGlobalFlagTrue{ Name=“FlagName” } )
+**Negated():** This function takes a condition as an argument and returns the opposite of that condition's truth value. If the condition is true, Negated(condition) will return false, and vice versa. For example:
+`Negated( IsGlobalFlagTrue{ Name=“FlagName” } )`
 
 **IsMonumentInUse( Name=“MonumentName” ):** This conditional checks if a monument (identified by “MonumentName”) is currently in use.
 
