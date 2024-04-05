@@ -46,11 +46,11 @@ PlayerHasGood
 ```
 
 # Map Scripts
-In the context of Spellforce scripting, Map Scripts are scripts that control various aspects of the game map. They can manipulate entities, control spawn points, and manage other map-related features. Two key functions available for entity management are `RtsSpawn` and `RtsSpawnNT`.
+In the context of Spellforce scripting, Map Scripts are scripts that control various aspects of the game map. They can manipulate entities, control spawn points, and manage other map-related features. Two key tables available for entity management are `RtsSpawn` and `RtsSpawnNT`.
 
-Map Scripts have access to these functions for spawning and respawning entities. These functions are particularly useful for controlling the behavior of entities in the game, such as their spawn locations, respawn rates, and conditions for spawning.
+Map Scripts have access to these tables for spawning and respawning entities. These tables are particularly useful for controlling the behavior of entities in the game, such as their spawn locations, respawn rates, and conditions for spawning.
 ### RtsSpawn
-`RtsSpawn` is a function that creates a respawn table. This table is used to spawn groups of entities, typically led by a Chief. The `FigureAlive` condition can be used to enable or disable the spawning and respawning of these entities. Notably, `RtsSpawn` does not depend on Camps and Buildings.
+`RtsSpawn` is a respawn table. This table is used to spawn groups of entities, typically led by a Chief. The `FigureAlive` condition can be used to enable or disable the spawning and respawning of these entities. Notably, `RtsSpawn` does not depend on Camps and Buildings.
 
 Here's an example of how to use `RtsSpawn`:
 ```
