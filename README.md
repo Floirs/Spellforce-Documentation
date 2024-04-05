@@ -34,13 +34,13 @@ For example:
 ```
 PlayerHasGood
 {
-   -– Types of Goods: GoodBoard(wood), GoodStone.
+   -– Types of Goods: GoodBoard(wood), GoodStone, GoodMithril, GoodFood, GoodIron, GoodManaElixir(aria), GoodManaHerb(placeholder).
    Good = GoodStone,
 
    -- Amount: Minimum amount of Goods.
    Amount = 1000,
 
-   -– Sides: SideLight for Human, Elves and Dwarves or "SideDark" for Dark Elves, Trolls and Orcs. 
+   -– Sides: SideLight (Human, Elves and Dwarves), SideDark (Dark Elves, Trolls and Orcs) or SideAll for both.
    Side = SideLight
 }
 ```
