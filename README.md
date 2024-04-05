@@ -1,8 +1,14 @@
-# Spellforce-Documentation
+# Contents
+
+- [Summary](#summary)
+- [Definitions](#definitions)
+- [Conditionals](#conditionals)
+- [Maps](#maps)
+
+# Summary
 Personal Documentation for Spellforce scripting that I made as I was learning.
 
-
-# DEFINITIONS
+# Definitions
 **ODER:** This is an OR function that checks if either of the two conditions is true. It returns True if either condition1 or condition2 is true, and False otherwise. 
 For example: `ODER(condition1, condition2)`
 
@@ -11,7 +17,7 @@ For example: `OR(condition1, condition2)`
 
 
 
-# CONDITIONALS
+# Conditionals
 **IsGlobalFlagTrue{ Name=“FlagName” }:** This conditional checks if a global flag (identified by “FlagName”) is set to true.
 
 **IsGlobalFlagFalse{ Name=“FlagName” }:** This conditional checks if a global flag (identified by “FlagName”) is set to false.
@@ -34,7 +40,7 @@ PlayerHasGood
 }
 ```
 
-# Code Examples
+# Maps
 
 ### RtsSpawn
 ```
