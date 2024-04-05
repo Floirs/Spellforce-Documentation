@@ -121,7 +121,7 @@ RtsSpawn
 ```
 
 
-# Items (barebones for now, just so I don't forget)
+# Items and Objects (barebones for now, just so I don't forget)
 
 ### Adding new Items
 It's important that after creating your new item, to go into the editor SQL Modifier and sql_item.lua and add the item model, otherwise it'll be invisible ingame.
