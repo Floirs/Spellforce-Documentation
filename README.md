@@ -120,6 +120,11 @@ RtsSpawn
 }
 ```
 
+# Units
+
+### Rune Army
+Spells and Weapon Spell effects given to Workers, rune army units, titans and swarms do not care about the level and instead the game adjusts the spell level according to the Worker Level. So a level 28 Worker would cause Rune Army spells to scale to lvl 12.
+
 
 # Items and Objects (barebones for now, just so I don't forget)
 
