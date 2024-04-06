@@ -1,7 +1,7 @@
 # Contents
 
 - [Summary](#summary)
-- [Definitions](#definitions)
+- [Functions](#functions)
 - [Conditionals](#conditionals)
 - [Map Scripts](#map-scripts)
 
@@ -32,8 +32,8 @@ A lot of the code and explanations provided here requires the Source Lua files f
 
 **PlayerHasGood{Good=, Amount=, Sides=, Player=, UpdateInterval=}:** This checks whether the player has a certain amount of a certain resource.
 * **Good=**: Specifies the type of Good. Goods can be GoodBoard(Wood), GoodStone, GoodMithril, GoodFood, GoodIron, GoodManaElixir(Aria), GoodManaHerb(Lenya).
-* **Amount=**: Specifies the minimum amount of the specified resource.
-* **Sides=**: Specifies which side to check for the resources. Sides can be SideLight (Human, Elves and Dwarves), SideDark (Dark Elves, Trolls and Orcs) or SideAll for both.
+* **Amount=**: Specifies the minimum amount of the specified resource. This parameter is optional and defaults to 1 if not specified.
+* **Sides=**: Specifies which side to check for the resources. Sides can be SideLight (Human, Elves and Dwarves), SideDark (Dark Elves, Trolls and Orcs) or SideAll for both. This parameter is optional and defaults to SideGood if not specified.
 * **Player=**: Specifies the Player to be checked (For Multiplayer). This parameter is optional and defaults to 1 if not specified.
 * **UpdateInterval=**: Specifies how often the condition should be checked, in GdSteps (10 GdSteps = 1 second). This parameter is optional and defaults to 60 GdSteps if not specified.
 
