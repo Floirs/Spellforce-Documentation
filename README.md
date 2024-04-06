@@ -10,40 +10,32 @@ This is a personal documentation that I made while learning Spellforce scripting
 
 A lot of the code and explanations provided here requires the Source Lua files found in: https://github.com/THQNordic/SpellForceLUASources
 
-# Definitions
-**ODER:** This is an OR function that checks if either of the two conditions is true. It returns True if either condition1 or condition2 is true, and False otherwise. 
-For example: `ODER(condition1, condition2)`
+# Functions
+**OR(condition1, condition2):** This is an OR function that checks if either of the two conditions is true. It returns True if either condition1 or condition2 is true, and False otherwise. 
 
-**OR:** This function is similar to ODER. It also checks if either of the two conditions is true and returns True if either condition1 or condition2 is true, and False otherwise.
-For example: `OR(condition1, condition2)`
-
-
+**ODER(condition1, condition2):** This function is similar to OR. It also checks if either of the two conditions is true and returns True if either condition1 or condition2 is true, and False otherwise.
 
 # Conditionals
-**IsGlobalFlagTrue{ Name=“FlagName” }:** This conditional checks if a global flag (identified by “FlagName”) is set to true.
+**IsGlobalFlagTrue{Name=“FlagName”}:** This conditional checks if a global flag (identified by “FlagName”) is set to true.
 
-**IsGlobalFlagFalse{ Name=“FlagName” }:** This conditional checks if a global flag (identified by “FlagName”) is set to false.
+**IsGlobalFlagFalse{Name=“FlagName”}:** This conditional checks if a global flag (identified by “FlagName”) is set to false.
 
-**Negated():** This function takes a condition as an argument and returns the opposite of that condition's truth value. If the condition is true, Negated(condition) will return false, and vice versa. 
-For example: `Negated( IsGlobalFlagTrue{ Name=“FlagName” } )`
+**Negated(condition):** This function takes a condition as an argument and returns the opposite of that condition's truth value. If the condition is true, Negated(condition) will return false, and vice versa.
 
-**IsMonumentInUse( Name=“MonumentName” ):** This conditional checks if a monument (identified by “MonumentName”) is currently in use.
+**IsMonumentInUse(Name=“MonumentName”):** This conditional checks if a monument (identified by “MonumentName”) is currently in use.
 
-**PlayerHasGood{}:** This conditional checks if the player has a specified good (resource). The properties of the good (such as its type, amount, and side) are defined within the brackets.
-For example:
-```
-PlayerHasGood
-{
-   -– Types of Goods: GoodBoard(Wood), GoodStone, GoodMithril, GoodFood, GoodIron, GoodManaElixir(Aria), GoodManaHerb(Lenya).
-   Good = GoodStone,
+**TimeOfDay{Hour=, Minute=, TimeFrame=, UpdateInterval=}**: This conditional checks whether the current time corresponds to the specified time, with a tolerance of + TimeFrame minutes. For example, at 12:30, it must be at least 12:30, and the maximum can be 12:30 + TimeFrame minutes for the condition to be true.
+* **Hour=**: Specifies the hour of the day (in 24-hour format) for the condition.
+* **Minute=**: Specifies the minute of the hour for the condition. This parameter is optional and defaults to 0 if not specified.
+* **TimeFrame=**: Specifies the tolerance in minutes for the condition. This parameter is optional and defaults to 15 minutes if not specified.
+* **UpdateInterval=**: Specifies how often the condition should be checked, in GdSteps (10 GdSteps = 1 second). This parameter is optional and defaults to 60 GdSteps if not specified.
 
-   -- Amount: Minimum amount of Goods.
-   Amount = 1000,
-
-   -– Sides: SideLight (Human, Elves and Dwarves), SideDark (Dark Elves, Trolls and Orcs) or SideAll for both.
-   Side = SideLight
-}
-```
+**PlayerHasGood{Good=, Amount=, Sides=, Player=, UpdateInterval=}:** This checks whether the player has a certain amount of a certain resource.
+* **Good=**: Specifies the type of Good. Goods can be GoodBoard(Wood), GoodStone, GoodMithril, GoodFood, GoodIron, GoodManaElixir(Aria), GoodManaHerb(Lenya).
+* **Amount=**: Specifies the minimum amount of the specified resource.
+* **Sides=**: Specifies which side to check for the resources. Sides can be SideLight (Human, Elves and Dwarves), SideDark (Dark Elves, Trolls and Orcs) or SideAll for both.
+* **Player=**: Specifies the Player to be checked (For Multiplayer). This parameter is optional and defaults to 1 if not specified.
+* **UpdateInterval=**: Specifies how often the condition should be checked, in GdSteps (10 GdSteps = 1 second). This parameter is optional and defaults to 60 GdSteps if not specified.
 
 # Map Scripts
 In the context of Spellforce scripting, Map Scripts are scripts that control various aspects of the game map. They can manipulate entities, control spawn points, and manage other map-related features. Two key tables available for entity management are `RtsSpawn` and `RtsSpawnNT`.
