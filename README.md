@@ -112,6 +112,15 @@ RtsSpawn
 }
 ```
 
+# Code Examples
+<details>
+  <summary><b>Placeholder</b></summary>
+  
+  <pre><code>
+  placeholder code
+  </code></pre>
+</details>
+
 # Units
 
 ### Rune Army
