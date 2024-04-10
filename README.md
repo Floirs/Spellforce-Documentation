@@ -42,74 +42,11 @@ In the context of Spellforce scripting, Map Scripts are scripts that control var
 
 Map Scripts have access to these tables for spawning and respawning entities. These tables are particularly useful for controlling the behavior of entities in the game, such as their spawn locations, respawn rates, and conditions for spawning.
 ### RtsSpawn
-`RtsSpawn` is a respawn table. This table is used to spawn groups of entities, typically led by a Chief. The `FigureAlive` condition can be used to enable or disable the spawning and respawning of these entities. Notably, `RtsSpawn` does not depend on Camps and Buildings.
+`RtsSpawn` table is used to spawn groups of entities, typically led by a Chief. Each group can only spawn up to `SpawnLimit` units. If a `Chief` is assigned, then the condition `FigureAlive` will automatically be added to the Group, and shall the Chief die then the spawn will stop prematurely.
 
-Here's an example of how to use `RtsSpawn`:
+`RtsSpawn` Syntax:
 ```
-Blades2 = 
-{
-    X = 215,
-    Y = 290,
-    Range = 1,
-    Chief = 0,
-    WaitTime = 80,
-    AvatarMinLevel = 0,
-    AvatarMaxLevel = 0,
-    Conditions = 
-    {
-        
-    },
-    Units = 
-    {
-        302,
-        304,
-        305,
-        307,
-        302 
-    },
-    ShuffleUnits = TRUE 
-}
-InitSpawn
-{
-    Clan = 4,
-    Groups = 
-    {
-        Blades1,
-        Blades2 
-    },
-    Conditions = 
-    {
-        IsGlobalFlagTrue
-        {
-            Name = "LightSpawnStart"
-        },
-        FigureAlive
-        {
-            NpcId = 302
-        } 
-    } 
-}
-RtsSpawn
-{
-    Clan = 4,
-    MaxClanSize = 31,
-    Groups = 
-    {
-        Blades1,
-        Blades2 
-    },
-    Conditions = 
-    {
-        IsGlobalFlagTrue
-        {
-            Name = "LightSpawnStart"
-        },
-        FigureAlive
-        {
-            NpcId = 302
-        } 
-    } 
-}
+
 ```
 
 # Code Examples
