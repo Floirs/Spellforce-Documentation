@@ -36,6 +36,20 @@ A lot of the code and explanations provided here requires the Source Lua files f
 * **Sides=**: Specifies which side to check for the resources. Sides can be SideLight (Human, Elves and Dwarves), SideDark (Dark Elves, Trolls and Orcs) or SideAll for both. This parameter is optional and defaults to SideGood if not specified.
 * **Player=**: Specifies the Player to be checked (For Multiplayer). This parameter is optional and defaults to 1 if not specified.
 * **UpdateInterval=**: Specifies how often the condition should be checked, in GdSteps (10 GdSteps = 1 second). This parameter is optional and defaults to 60 GdSteps if not specified.
+<details>
+  <summary><b>PlayerHasGood</b> Syntax:</summary>
+  <pre><code>
+PlayerHasGood
+{
+    Good = ,
+    Amount = 1,
+    Side = SideAll,
+    Player = 1,
+    UpdateInterval = 60,
+}
+  </code></pre>
+</details>
+
 
 # Map Scripts
 In the context of Spellforce scripting, Map Scripts are scripts that control various aspects of the game map. They can manipulate entities, control spawn points, and manage other map-related features. Two key tables available for entity management are `RtsSpawn` and `RtsSpawnNT`.
@@ -44,10 +58,33 @@ Map Scripts have access to these tables for spawning and respawning entities. Th
 ### RtsSpawn
 `RtsSpawn` table is used to spawn groups of entities, typically led by a Chief. Each group can only spawn up to `SpawnLimit` units. If a `Chief` is assigned, then the condition `FigureAlive` will automatically be added to the Group, and shall the Chief die then the spawn will stop prematurely.
 
-`RtsSpawn` Syntax:
-```
-
-```
+<details>
+  <summary><b>RtsSpawn</b> Syntax:</summary>
+  <pre><code>
+GroupToSpawn_1 =
+{
+    X = 128,               -- X-coordinate of the spawn location
+    Y = 155,               -- Y-coordinate of the spawn location
+    Range = 3,
+    WaitTime = 1,          -- Time in seconds the group waits before spawning (GlobalTimeElapsed condition).
+    AvatarMinLevel = 0,    -- Minimum level of the Avatar for this Group to spawn. Value of 0 means no limit.
+    AvatarMaxLevel = 0,    -- Maximum level of the Avatar for this Group to spawn. Value of 0 means no limit.
+    SpawnLimit = 10,       -- Maximum number of units that can be spawned by this Group. -1 = Spawn only once, 0 = Infinite, Number = Spawn up to this number.
+    Chief = 2997,          -- NpcId of the Group Chief (the Group Boss Unit). If he dies, the Group stops spawning.
+    Conditions = {},       -- Conditions for spawn to work. If this fails, only this Group will stop spawning.
+    ShuffleUnits = FALSE,  -- If TRUE Discards the order set in Units{} table and spawns randomly.
+    Units = {777, 779, },	 -- Units to spawn in the order specified until it reaches the end, then it starts again from the beginning, except if SpawnLimit is equal to -1, in that case once it reaches the end the Group stop spawning units.
+}
+<br>
+RtsSpawn
+{
+    Clan = 3,
+    MaxClanSize = 20,      -- Maximum number of units ever spawned in any of the Groups.
+    Groups = {GroupToSpawn_1},
+    Conditions = {},       -- Condition for the Clan to be able to spawn, if this fails no Group can spawn.
+}
+  </code></pre>
+</details>
 
 # Code Examples
 <details>
