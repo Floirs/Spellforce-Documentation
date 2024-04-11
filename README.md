@@ -1,9 +1,11 @@
 # Contents
 
 - [Summary](#summary)
-- [Functions](#functions)
+- [Global Events](#global-events)
+- [Actions](#actions)
 - [Conditionals](#conditionals)
 - [Map Scripts](#map-scripts)
+- [Npc Scripts](#npc-scripts)
 
 # Summary
 This is a personal documentation that I made while learning Spellforce scripting.
