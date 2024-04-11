@@ -66,7 +66,7 @@ In the context of Spellforce scripting, Map Scripts are scripts that control var
 Map Scripts have access to these tables for spawning and respawning entities. These tables are particularly useful for controlling the behavior of entities in the game, such as their spawn locations, respawn rates, and conditions for spawning.
 ## Spawn/Respawn Scripts
 ### RtsSpawn
-`RtsSpawn` table is used to spawn groups of entities, typically led by one or more Chiefs. Each group can only spawn up to `SpawnLimit` units. If one or more `Chief` is assigned, then the condition `FigureAlive` will automatically be added to the Group, and shall any of the Chiefs die then the spawn will stop prematurely.
+`RtsSpawn` table is used to spawn groups of entities, typically led by one or more Chiefs. Each group can normally only spawn up to `SpawnLimit` units. If one or more `Chief` is assigned, then the condition `FigureAlive` will automatically be added to the Group, and shall any of the Chiefs die then the spawn will stop prematurely. The spawnrate of units spawned by RtsSpawn seems to be around 11~12 seconds per unit, which is not something you can change.
 
 The `RtsSpawn` table has the following fields:
 * **Clan =**: Clan number identifier.
