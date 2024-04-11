@@ -59,8 +59,8 @@ Map Scripts have access to these tables for spawning and respawning entities. Th
 </details>
 
 ### Player Character Identifier in different parameters (placeholder)
-NpcId = Avatar,
-FigureType = FigureAvatar,
+* NpcId = Avatar,
+* FigureType = FigureAvatar,
 
 # Units
 
