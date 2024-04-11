@@ -13,7 +13,12 @@ Unofficial Spellforce Modding Documentation.
 A lot of the code and explanations provided here requires the Source Lua files found in: https://github.com/THQNordic/SpellForceLUASources
 
 # Global Events
-To be added.
+WIP
+## BeginScript
+Disclaimer: This event appears to be designed for use with NPC Scripts. Implementing it in a platform script (such as n0.lua) could potentially cause all your scripts to malfunction. Further testing is required for a conclusive answer.
+
+## OnEvent
+Disclaimer: This event seems to exhibit an issue where, if the condition is met even once, it will continuously trigger the Actions without end. This could effectively block any Events listed after this one from being triggered. Further testing is required for a conclusive answer.
 
 # Actions
 To be added.
