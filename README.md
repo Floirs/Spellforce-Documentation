@@ -82,7 +82,7 @@ The `RtsSpawn` table has the following fields:
 * **MaxClanLevel =**: Untested.
 * **Groups = {}**: A Table containing different `Group` tables.
 * **Conditions = {}**: Conditions for enabling this Clan and subsequently the spawn of all `Groups` within.
-* **Effect =**: Untested.
+* **Effect =**: Effect used when spawning units belonging to this Spawn.
 * **Length =**: Untested.
 
 Each `Group` table in the `Groups` table has the following fields:
@@ -93,7 +93,7 @@ Each `Group` table in the `Groups` table has the following fields:
 * **AvatarMinLevel =**: Minimum level of the Avatar for this Group to spawn. This field is optional and defaults to 0 if not specified.
 * **AvatarMaxLevel =**: Maximum level of the Avatar for this Group to spawn. This field is optional and defaults to 0 if not specified.
 * **SpawnLimit =**: Maximum number of units that can be spawned by this Group. -1 = Spawn Units{} table only once, 0 = No-limit. This field is optional and defaults to 0 if not specified.
-* **Chief = {}**: NpcId of the Group Chief (the Group Boss Unit). If he dies, the Group stops spawning.
+* **Chief = {}**: NpcId of the Group Chief (the Group Boss Unit). The value can be either a NpcId or a table of NpcIds. If a Chief dies, the Group stops spawning. 0 by Default.
 * **BeginConditions = {}**: Untested. This field is optional and defaults to a empty table if not specified.
 * **Conditions = {}**: Conditions for spawn to work. If this fails, only this Group will stop spawning. This field is optional and defaults to a empty table if not specified.
 * **ShuffleUnits =**: If TRUE Discards the order set in Units{} table and spawns randomly. This field is optional and defaults to FALSE if not specified.
