@@ -8,7 +8,7 @@
 - [Npc Scripts](#npc-scripts)
 
 # Summary
-This is a personal documentation that I made while learning Spellforce scripting.
+Unofficial Spellforce Modding Documentation.
 
 A lot of the code and explanations provided here requires the Source Lua files found in: https://github.com/THQNordic/SpellForceLUASources
 
