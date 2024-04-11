@@ -59,6 +59,7 @@ PlayerHasGood
   </code></pre>
 </details>
 
+**IsClanSize{Clan=, Size=, UpdateInterval=}**: Checks if the ClanSize of `Clan` equals the `Size` field. It's recommended to use IsNpcCounter for better interaction with ClanSize for complex scripts if you want to make use of Conditional Operators.
 
 # Map Scripts
 In the context of Spellforce scripting, Map Scripts are scripts that control various aspects of the game map. They can manipulate entities, control spawn points, and manage other map-related features. Two key tables available for entity management are `RtsSpawn` and `RtsSpawnNT`.
