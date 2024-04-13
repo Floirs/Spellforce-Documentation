@@ -1,17 +1,9 @@
-# Contents
+# Unofficial Spellforce Modding Documentation.
 
-- [Summary](#summary)
-- [Global Events](#global-events)
-- [Actions](#actions)
-- [Conditionals](#conditionals)
-- [Map Scripts](#map-scripts)
-- [Npc Scripts](#npc-scripts)
+Preface: A lot of the code and explanations provided here requires the Source Lua files found in: https://github.com/THQNordic/SpellForceLUASources
 
-# Summary
-Unofficial Spellforce Modding Documentation.
-
-**NOTE**: This documentation is being converted into the wiki format which you can check by clicking on the link below.
-
-Go to: https://github.com/Floirs/Spellforce-Documentation/wiki for modding guide.
-
-A lot of the code and explanations provided here requires the Source Lua files found in: https://github.com/THQNordic/SpellForceLUASources
+### Modding Documentation Links:
+- [Home](https://github.com/Floirs/Spellforce-Documentation/wiki)
+- [Global Events](https://github.com/Floirs/Spellforce-Documentation/wiki/Global-Events)
+- [Conditions](https://github.com/Floirs/Spellforce-Documentation/wiki/Conditions)
+- [Actions](https://github.com/Floirs/Spellforce-Documentation/wiki/Actions)
